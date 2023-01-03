@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.util.ArrayList?>
+
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -11,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
       <Label layoutX="229.0" layoutY="252.0" prefHeight="16.0" prefWidth="133.0" text="Количество этапов" />
       <Label layoutX="229.0" layoutY="287.0" prefHeight="17.0" prefWidth="107.0" text="Количество путей" />
@@ -33,22 +35,46 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label prefHeight="25.0" prefWidth="50.0" text="BDIQR" />
-            <Label prefHeight="25.0" prefWidth="50.0" text="BHPR" GridPane.rowIndex="1" />
-            <Label prefHeight="25.0" prefWidth="50.0" text="GLO" GridPane.rowIndex="2" />
-            <Label prefHeight="25.0" prefWidth="50.0" text="GKNS" GridPane.rowIndex="3" />
-            <Label prefHeight="25.0" prefWidth="50.0" text="FKNS" GridPane.rowIndex="4" />
-            <Label text="AEMS" GridPane.rowIndex="5" />
-            <Label text="ACJMS" GridPane.rowIndex="6" />
-            <Label text="ACJTS" GridPane.rowIndex="7" />
-            <TextField fx:id="way1TField" editable="false" prefWidth="85.0" GridPane.columnIndex="1" />
-            <TextField fx:id="way2TField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="way3TField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="way4TField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="way5TField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextField editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <TextField editable="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+			<fx:define>
+				<ArrayList fx:id="arrayWayLabel">
+					<Label fx:id="way1Label" prefHeight="25.0" prefWidth="50.0" text="BDIQR" />
+					<Label fx:id="way2Label" prefHeight="25.0" prefWidth="50.0" text="BHPR" GridPane.rowIndex="1" />
+					<Label fx:id="way3Label" prefHeight="25.0" prefWidth="50.0" text="GLO" GridPane.rowIndex="2" />
+					<Label fx:id="way4Label" prefHeight="25.0" prefWidth="50.0" text="GKNS" GridPane.rowIndex="3" />
+					<Label fx:id="way5Label" prefHeight="25.0" prefWidth="50.0" text="FKNS" GridPane.rowIndex="4" />
+					<Label fx:id="way6Label" text="AEMS" GridPane.rowIndex="5" />
+					<Label fx:id="way7Label" text="ACJMS" GridPane.rowIndex="6" />
+					<Label fx:id="way8Label" text="ACJTS" GridPane.rowIndex="7" />
+				</ArrayList>
+			</fx:define>
+			<fx:reference source ="way1Label"/>
+			<fx:reference source ="way2Label"/>  
+			<fx:reference source ="way3Label"/>
+			<fx:reference source ="way4Label"/>
+			<fx:reference source ="way5Label"/>
+			<fx:reference source ="way6Label"/>
+			<fx:reference source ="way7Label"/>  
+			<fx:reference source ="way8Label"/>
+			<fx:define>
+				<ArrayList fx:id="arrayWayTField">
+					<TextField fx:id="way1TField" editable="false" prefWidth="85.0" GridPane.columnIndex="1" />
+					<TextField fx:id="way2TField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+					<TextField fx:id="way3TField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+					<TextField fx:id="way4TField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+					<TextField fx:id="way5TField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+					<TextField fx:id="way6TField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+					<TextField fx:id="way7TField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+					<TextField fx:id="way8TField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+				</ArrayList>
+			</fx:define>
+			<fx:reference source ="way1TField"/>
+			<fx:reference source ="way2TField"/>  
+			<fx:reference source ="way3TField"/>
+			<fx:reference source ="way4TField"/>
+			<fx:reference source ="way5TField"/>
+			<fx:reference source ="way6TField"/>
+			<fx:reference source ="way7TField"/>  
+			<fx:reference source ="way8TField"/>
          </children>
       </GridPane>
       <GridPane alignment="CENTER" layoutX="208.0" prefHeight="206.0" prefWidth="557.0">
@@ -85,8 +111,8 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="B" GridPane.columnIndex="1" />
+			<Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" />
+			<Text strokeType="OUTSIDE" strokeWidth="0.0" text="B" GridPane.columnIndex="1" />
 			<Text strokeType="OUTSIDE" strokeWidth="0.0" text="C" GridPane.columnIndex="2" />
 			<Text strokeType="OUTSIDE" strokeWidth="0.0" text="D" GridPane.columnIndex="3" />
 			<Text strokeType="OUTSIDE" strokeWidth="0.0" text="E" GridPane.columnIndex="4" />
@@ -104,147 +130,315 @@
 			<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Q" GridPane.columnIndex="16" />
 			<Text strokeType="OUTSIDE" strokeWidth="0.0" text="R" GridPane.columnIndex="17" />
 			<Text strokeType="OUTSIDE" strokeWidth="0.0" text="S" GridPane.columnIndex="18" />
-			<Text strokeType="OUTSIDE" strokeWidth="0.0" text="T" GridPane.columnIndex="19" />
-            <TextField fx:id="newTimeATField" GridPane.rowIndex="1" />
-            <TextField fx:id="newTimeBTField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeCTField" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeDTField" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeETField" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeFTField" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeGTField" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeHTField" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeITField" GridPane.columnIndex="8" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeJTField" GridPane.columnIndex="9" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeKTField" GridPane.columnIndex="10" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeLTField" GridPane.columnIndex="11" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeMTField" GridPane.columnIndex="12" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeNTField" GridPane.columnIndex="13" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeOTField" GridPane.columnIndex="14" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimePTField" GridPane.columnIndex="15" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeQTField" GridPane.columnIndex="16" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeRTField" GridPane.columnIndex="17" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeSTField" GridPane.columnIndex="18" GridPane.rowIndex="1" />
-			<TextField fx:id="newTimeTTField" GridPane.columnIndex="19" GridPane.rowIndex="1" />
-			<TextField fx:id="costForFirstDayATField" text="7" GridPane.rowIndex="2" />
-            <TextField fx:id="costForFirstDayBTField" text="6" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayCTField" text="8" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayDTField" text="6" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayETField" text="7" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayFTField" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayGTField" text="9" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayHTField" text="7" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayITField" text="8" GridPane.columnIndex="8" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayJTField" text="7" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayKTField" text="9" GridPane.columnIndex="10" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayLTField" text="5" GridPane.columnIndex="11" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayMTField" text="7" GridPane.columnIndex="12" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayNTField" text="8" GridPane.columnIndex="13" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayOTField" text="6" GridPane.columnIndex="14" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayPTField" text="10" GridPane.columnIndex="15" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayQTField" text="5" GridPane.columnIndex="16" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayRTField" text="9" GridPane.columnIndex="17" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDaySTField" text="8" GridPane.columnIndex="18" GridPane.rowIndex="2" />
-			<TextField fx:id="costForFirstDayTTField" text="9" GridPane.columnIndex="19" GridPane.rowIndex="2" />
-			<TextField fx:id="costForSecondDayATField" text="12" GridPane.rowIndex="3" />
-            <TextField fx:id="costForSecondDayBTField" text="14" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayCTField" text="18" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayDTField" text="13" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayETField" text="12" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayFTField" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayGTField" text="15" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayHTField" text="14" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayITField" text="15" GridPane.columnIndex="8" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayJTField" text="17" GridPane.columnIndex="9" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayKTField" text="16" GridPane.columnIndex="10" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayLTField" text="15" GridPane.columnIndex="11" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayMTField" GridPane.columnIndex="12" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayNTField" text="14" GridPane.columnIndex="13" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayOTField" text="13" GridPane.columnIndex="14" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayPTField" text="20" GridPane.columnIndex="15" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayQTField" text="10" GridPane.columnIndex="16" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayRTField" text="18" GridPane.columnIndex="17" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDaySTField" text="17" GridPane.columnIndex="18" GridPane.rowIndex="3" />
-			<TextField fx:id="costForSecondDayTTField" text="19" GridPane.columnIndex="19" GridPane.rowIndex="3" />
-			<TextField fx:id="oldTimeATField" text="6" GridPane.rowIndex="4" />
-            <TextField fx:id="oldTimeBTField" text="9" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeCTField" text="11" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeDTField" text="10" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeETField" text="15" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeFTField" text="9" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeGTField" text="10" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeHTField" text="9" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeITField" text="15" GridPane.columnIndex="8" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeJTField" text="12" GridPane.columnIndex="9" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeKTField" text="11" GridPane.columnIndex="10" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeLTField" text="9" GridPane.columnIndex="11" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeMTField" text="10" GridPane.columnIndex="12" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeNTField" text="6" GridPane.columnIndex="13" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeOTField" text="14" GridPane.columnIndex="14" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimePTField" text="6" GridPane.columnIndex="15" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeQTField" text="12" GridPane.columnIndex="16" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeRTField" text="10" GridPane.columnIndex="17" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeSTField" text="12" GridPane.columnIndex="18" GridPane.rowIndex="4" />
-			<TextField fx:id="oldTimeSTField" text="12" GridPane.columnIndex="19" GridPane.rowIndex="4" />
-			<TextField fx:id="reduceTimeATField" editable="false" text="0" GridPane.rowIndex="5" />
-            <TextField fx:id="reduceTimeBTField" editable="false" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeCTField" editable="false" text="0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeDTField" editable="false" text="0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeETField" editable="false" text="0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeFTField" editable="false" text="0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeGTField" editable="false" text="0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeHTField" editable="false" text="0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeITField" editable="false" text="0" GridPane.columnIndex="8" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeJTField" editable="false" text="0" GridPane.columnIndex="9" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeKTField" editable="false" text="0" GridPane.columnIndex="10" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeLTField" editable="false" text="0" GridPane.columnIndex="11" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeMTField" editable="false" text="0" GridPane.columnIndex="12" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeNTField" editable="false" text="0" GridPane.columnIndex="13" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeOTField" editable="false" text="0" GridPane.columnIndex="14" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimePTField" editable="false" text="0" GridPane.columnIndex="15" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeQTField" editable="false" text="0" GridPane.columnIndex="16" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeRTField" editable="false" text="0" GridPane.columnIndex="17" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeSTField" editable="false" text="0" GridPane.columnIndex="18" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceTimeTTField" editable="false" text="0" GridPane.columnIndex="19" GridPane.rowIndex="5" />
-			<TextField fx:id="reduceFirstTimeATField" editable="false" text="0" GridPane.rowIndex="6" />
-            <TextField fx:id="reduceFirstTimeBTField" editable="false" text="0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeCTField" editable="false" text="0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeDTField" editable="false" text="0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeETField" editable="false" text="0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeFTField" editable="false" text="0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeGTField" editable="false" text="0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeHTField" editable="false" text="0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeITField" editable="false" text="0" GridPane.columnIndex="8" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeJTField" editable="false" text="0" GridPane.columnIndex="9" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeKTField" editable="false" text="0" GridPane.columnIndex="10" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeLTField" editable="false" text="0" GridPane.columnIndex="11" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeMTField" editable="false" text="0" GridPane.columnIndex="12" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeNTField" editable="false" text="0" GridPane.columnIndex="13" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeOTField" editable="false" text="0" GridPane.columnIndex="14" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimePTField" editable="false" text="0" GridPane.columnIndex="15" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeQTField" editable="false" text="0" GridPane.columnIndex="16" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeRTField" editable="false" text="0" GridPane.columnIndex="17" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeSTField" editable="false" text="0" GridPane.columnIndex="18" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceFirstTimeTTField" editable="false" text="0" GridPane.columnIndex="19" GridPane.rowIndex="6" />
-			<TextField fx:id="reduceSecondTimeATField" editable="false" text="0" GridPane.rowIndex="7" />
-            <TextField fx:id="reduceSecondTimeBTField" editable="false" text="0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeCTField" editable="false" text="0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeDTField" editable="false" text="0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeETField" editable="false" text="0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeFTField" editable="false" text="0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeGTField" editable="false" text="0" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeHTField" editable="false" text="0" GridPane.columnIndex="7" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeITField" editable="false" text="0" GridPane.columnIndex="8" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeJTField" editable="false" text="0" GridPane.columnIndex="9" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeKTField" editable="false" text="0" GridPane.columnIndex="10" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeLTField" editable="false" text="0" GridPane.columnIndex="11" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeMTField" editable="false" text="0" GridPane.columnIndex="12" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeNTField" editable="false" text="0" GridPane.columnIndex="13" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeOTField" editable="false" text="0" GridPane.columnIndex="14" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimePTField" editable="false" text="0" GridPane.columnIndex="15" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeQTField" editable="false" text="0" GridPane.columnIndex="16" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeRTField" editable="false" text="0" GridPane.columnIndex="17" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeSTField" editable="false" text="0" GridPane.columnIndex="18" GridPane.rowIndex="7" />
-			<TextField fx:id="reduceSecondTimeTTField" editable="false" text="0" GridPane.columnIndex="19" GridPane.rowIndex="7" />
+			<Text strokeType="OUTSIDE" strokeWidth="0.0" text="T" GridPane.columnIndex="19" />	
+			<fx:define>
+				<ArrayList fx:id="arrayNewTimeTField">
+		            <TextField fx:id="newTimeATField" GridPane.rowIndex="1" />
+		            <TextField fx:id="newTimeBTField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeCTField" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeDTField" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeETField" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeFTField" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeGTField" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeHTField" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeITField" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeJTField" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeKTField" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeLTField" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeMTField" GridPane.columnIndex="12" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeNTField" GridPane.columnIndex="13" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeOTField" GridPane.columnIndex="14" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimePTField" GridPane.columnIndex="15" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeQTField" GridPane.columnIndex="16" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeRTField" GridPane.columnIndex="17" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeSTField" GridPane.columnIndex="18" GridPane.rowIndex="1" />
+					<TextField fx:id="newTimeTTField" GridPane.columnIndex="19" GridPane.rowIndex="1" />
+				</ArrayList>
+			</fx:define>
+			<fx:reference source ="newTimeATField"/>
+			<fx:reference source ="newTimeBTField"/>  
+			<fx:reference source ="newTimeCTField"/>
+			<fx:reference source ="newTimeDTField"/>
+			<fx:reference source ="newTimeETField"/>
+			<fx:reference source ="newTimeFTField"/>
+			<fx:reference source ="newTimeGTField"/>  
+			<fx:reference source ="newTimeHTField"/>
+			<fx:reference source ="newTimeITField"/>
+			<fx:reference source ="newTimeJTField"/>
+			<fx:reference source ="newTimeKTField"/>  
+			<fx:reference source ="newTimeLTField"/> 
+			<fx:reference source ="newTimeMTField"/>
+			<fx:reference source ="newTimeNTField"/>
+			<fx:reference source ="newTimeOTField"/>
+			<fx:reference source ="newTimePTField"/>
+			<fx:reference source ="newTimeQTField"/>  
+			<fx:reference source ="newTimeRTField"/>
+			<fx:reference source ="newTimeSTField"/>
+			<fx:reference source ="newTimeTTField"/>
+			<fx:define>
+				<ArrayList fx:id="arrayCostForFirstDayTField">
+					<TextField fx:id="costForFirstDayATField" text="7" GridPane.rowIndex="2" />
+		            <TextField fx:id="costForFirstDayBTField" text="6" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayCTField" text="8" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayDTField" text="6" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayETField" text="7" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayFTField" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayGTField" text="9" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayHTField" text="7" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayITField" text="8" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayJTField" text="7" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayKTField" text="9" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayLTField" text="5" GridPane.columnIndex="11" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayMTField" text="7" GridPane.columnIndex="12" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayNTField" text="8" GridPane.columnIndex="13" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayOTField" text="6" GridPane.columnIndex="14" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayPTField" text="10" GridPane.columnIndex="15" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayQTField" text="5" GridPane.columnIndex="16" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayRTField" text="9" GridPane.columnIndex="17" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDaySTField" text="8" GridPane.columnIndex="18" GridPane.rowIndex="2" />
+					<TextField fx:id="costForFirstDayTTField" text="9" GridPane.columnIndex="19" GridPane.rowIndex="2" />
+				</ArrayList>
+			</fx:define>
+			<fx:reference source ="costForFirstDayATField"/>
+			<fx:reference source ="costForFirstDayBTField"/>  
+			<fx:reference source ="costForFirstDayCTField"/>
+			<fx:reference source ="costForFirstDayDTField"/>
+			<fx:reference source ="costForFirstDayETField"/>
+			<fx:reference source ="costForFirstDayFTField"/>
+			<fx:reference source ="costForFirstDayGTField"/>  
+			<fx:reference source ="costForFirstDayHTField"/>
+			<fx:reference source ="costForFirstDayITField"/>
+			<fx:reference source ="costForFirstDayJTField"/>
+			<fx:reference source ="costForFirstDayKTField"/>  
+			<fx:reference source ="costForFirstDayLTField"/> 
+			<fx:reference source ="costForFirstDayMTField"/>
+			<fx:reference source ="costForFirstDayNTField"/>
+			<fx:reference source ="costForFirstDayOTField"/>
+			<fx:reference source ="costForFirstDayPTField"/>
+			<fx:reference source ="costForFirstDayQTField"/>  
+			<fx:reference source ="costForFirstDayRTField"/>
+			<fx:reference source ="costForFirstDaySTField"/>
+			<fx:reference source ="costForFirstDayTTField"/>
+			<fx:define>
+				<ArrayList fx:id="costForSecondDayTField">
+					<TextField fx:id="costForSecondDayATField" text="12" GridPane.rowIndex="3" />
+		            <TextField fx:id="costForSecondDayBTField" text="14" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayCTField" text="18" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayDTField" text="13" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayETField" text="12" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayFTField" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayGTField" text="15" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayHTField" text="14" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayITField" text="15" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayJTField" text="17" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayKTField" text="16" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayLTField" text="15" GridPane.columnIndex="11" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayMTField" GridPane.columnIndex="12" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayNTField" text="14" GridPane.columnIndex="13" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayOTField" text="13" GridPane.columnIndex="14" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayPTField" text="20" GridPane.columnIndex="15" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayQTField" text="10" GridPane.columnIndex="16" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayRTField" text="18" GridPane.columnIndex="17" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDaySTField" text="17" GridPane.columnIndex="18" GridPane.rowIndex="3" />
+					<TextField fx:id="costForSecondDayTTField" text="19" GridPane.columnIndex="19" GridPane.rowIndex="3" />
+				</ArrayList>
+			</fx:define>
+			<fx:reference source ="costForSecondDayATField"/>
+			<fx:reference source ="costForSecondDayBTField"/>  
+			<fx:reference source ="costForSecondDayCTField"/>
+			<fx:reference source ="costForSecondDayDTField"/>
+			<fx:reference source ="costForSecondDayETField"/>
+			<fx:reference source ="costForSecondDayFTField"/>
+			<fx:reference source ="costForSecondDayGTField"/>  
+			<fx:reference source ="costForSecondDayHTField"/>
+			<fx:reference source ="costForSecondDayITField"/>
+			<fx:reference source ="costForSecondDayJTField"/>
+			<fx:reference source ="costForSecondDayKTField"/>  
+			<fx:reference source ="costForSecondDayLTField"/> 
+			<fx:reference source ="costForSecondDayMTField"/>
+			<fx:reference source ="costForSecondDayNTField"/>
+			<fx:reference source ="costForSecondDayOTField"/>
+			<fx:reference source ="costForSecondDayPTField"/>
+			<fx:reference source ="costForSecondDayQTField"/>  
+			<fx:reference source ="costForSecondDayRTField"/>
+			<fx:reference source ="costForSecondDaySTField"/>
+			<fx:reference source ="costForSecondDayTTField"/>
+			<fx:define>
+				<ArrayList fx:id="arrayOldTimeTField">
+					<TextField fx:id="oldTimeATField" text="6" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeBTField" text="9" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeCTField" text="11" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeDTField" text="10" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeETField" text="15" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeFTField" text="9" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeGTField" text="10" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeHTField" text="9" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeITField" text="15" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeJTField" text="12" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeKTField" text="11" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeLTField" text="9" GridPane.columnIndex="11" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeMTField" text="10" GridPane.columnIndex="12" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeNTField" text="6" GridPane.columnIndex="13" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeOTField" text="14" GridPane.columnIndex="14" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimePTField" text="6" GridPane.columnIndex="15" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeQTField" text="12" GridPane.columnIndex="16" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeRTField" text="10" GridPane.columnIndex="17" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeSTField" text="12" GridPane.columnIndex="18" GridPane.rowIndex="4" />
+					<TextField fx:id="oldTimeTTField" text="12" GridPane.columnIndex="19" GridPane.rowIndex="4" />
+				</ArrayList>
+			</fx:define>		
+			<fx:reference source ="oldTimeATField"/>
+			<fx:reference source ="oldTimeBTField"/>  
+			<fx:reference source ="oldTimeCTField"/>
+			<fx:reference source ="oldTimeDTField"/>
+			<fx:reference source ="oldTimeETField"/>
+			<fx:reference source ="oldTimeFTField"/>
+			<fx:reference source ="oldTimeGTField"/>  
+			<fx:reference source ="oldTimeHTField"/>
+			<fx:reference source ="oldTimeITField"/>
+			<fx:reference source ="oldTimeJTField"/>
+			<fx:reference source ="oldTimeKTField"/>
+			<fx:reference source ="oldTimeLTField"/>  
+			<fx:reference source ="oldTimeMTField"/>
+			<fx:reference source ="oldTimeNTField"/>
+			<fx:reference source ="oldTimeOTField"/>
+			<fx:reference source ="oldTimePTField"/>
+			<fx:reference source ="oldTimeQTField"/>
+			<fx:reference source ="oldTimeRTField"/>
+			<fx:reference source ="oldTimeSTField"/>  
+			<fx:reference source ="oldTimeTTField"/>		
+			<fx:define>
+				<ArrayList fx:id="arrayReduceTimeTField">		
+					<TextField fx:id="reduceTimeATField" editable="false" text="0" GridPane.rowIndex="5" />
+		            <TextField fx:id="reduceTimeBTField" editable="false" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeCTField" editable="false" text="0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeDTField" editable="false" text="0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeETField" editable="false" text="0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeFTField" editable="false" text="0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeGTField" editable="false" text="0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeHTField" editable="false" text="0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeITField" editable="false" text="0" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeJTField" editable="false" text="0" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeKTField" editable="false" text="0" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeLTField" editable="false" text="0" GridPane.columnIndex="11" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeMTField" editable="false" text="0" GridPane.columnIndex="12" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeNTField" editable="false" text="0" GridPane.columnIndex="13" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeOTField" editable="false" text="0" GridPane.columnIndex="14" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimePTField" editable="false" text="0" GridPane.columnIndex="15" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeQTField" editable="false" text="0" GridPane.columnIndex="16" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeRTField" editable="false" text="0" GridPane.columnIndex="17" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeSTField" editable="false" text="0" GridPane.columnIndex="18" GridPane.rowIndex="5" />
+					<TextField fx:id="reduceTimeTTField" editable="false" text="0" GridPane.columnIndex="19" GridPane.rowIndex="5" />
+				</ArrayList>
+			</fx:define>
+			<fx:reference source ="reduceTimeATField"/>
+			<fx:reference source ="reduceTimeBTField"/>  
+			<fx:reference source ="reduceTimeCTField"/>
+			<fx:reference source ="reduceTimeDTField"/>
+			<fx:reference source ="reduceTimeETField"/>
+			<fx:reference source ="reduceTimeFTField"/>
+			<fx:reference source ="reduceTimeGTField"/>  
+			<fx:reference source ="reduceTimeHTField"/>
+			<fx:reference source ="reduceTimeITField"/>
+			<fx:reference source ="reduceTimeJTField"/>
+			<fx:reference source ="reduceTimeKTField"/>
+			<fx:reference source ="reduceTimeLTField"/>  
+			<fx:reference source ="reduceTimeMTField"/>
+			<fx:reference source ="reduceTimeNTField"/>
+			<fx:reference source ="reduceTimeOTField"/>
+			<fx:reference source ="reduceTimePTField"/>
+			<fx:reference source ="reduceTimeQTField"/>
+			<fx:reference source ="reduceTimeRTField"/>
+			<fx:reference source ="reduceTimeSTField"/>  
+			<fx:reference source ="reduceTimeTTField"/>	
+			<fx:define>
+				<ArrayList fx:id="arrayReduceFirstTimeTField">
+					<TextField fx:id="reduceFirstTimeATField" editable="false" text="0" GridPane.rowIndex="6" />
+		            <TextField fx:id="reduceFirstTimeBTField" editable="false" text="0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeCTField" editable="false" text="0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeDTField" editable="false" text="0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeETField" editable="false" text="0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeFTField" editable="false" text="0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeGTField" editable="false" text="0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeHTField" editable="false" text="0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeITField" editable="false" text="0" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeJTField" editable="false" text="0" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeKTField" editable="false" text="0" GridPane.columnIndex="10" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeLTField" editable="false" text="0" GridPane.columnIndex="11" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeMTField" editable="false" text="0" GridPane.columnIndex="12" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeNTField" editable="false" text="0" GridPane.columnIndex="13" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeOTField" editable="false" text="0" GridPane.columnIndex="14" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimePTField" editable="false" text="0" GridPane.columnIndex="15" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeQTField" editable="false" text="0" GridPane.columnIndex="16" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeRTField" editable="false" text="0" GridPane.columnIndex="17" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeSTField" editable="false" text="0" GridPane.columnIndex="18" GridPane.rowIndex="6" />
+					<TextField fx:id="reduceFirstTimeTTField" editable="false" text="0" GridPane.columnIndex="19" GridPane.rowIndex="6" />
+				</ArrayList>
+			</fx:define>
+			<fx:reference source ="reduceFirstTimeATField"/>
+			<fx:reference source ="reduceFirstTimeBTField"/>  
+			<fx:reference source ="reduceFirstTimeCTField"/>
+			<fx:reference source ="reduceFirstTimeDTField"/>
+			<fx:reference source ="reduceFirstTimeETField"/>
+			<fx:reference source ="reduceFirstTimeFTField"/>
+			<fx:reference source ="reduceFirstTimeGTField"/>  
+			<fx:reference source ="reduceFirstTimeHTField"/>
+			<fx:reference source ="reduceFirstTimeITField"/>
+			<fx:reference source ="reduceFirstTimeJTField"/>
+			<fx:reference source ="reduceFirstTimeKTField"/>
+			<fx:reference source ="reduceFirstTimeLTField"/>  
+			<fx:reference source ="reduceFirstTimeMTField"/>
+			<fx:reference source ="reduceFirstTimeNTField"/>
+			<fx:reference source ="reduceFirstTimeOTField"/>
+			<fx:reference source ="reduceFirstTimePTField"/>
+			<fx:reference source ="reduceFirstTimeQTField"/>
+			<fx:reference source ="reduceFirstTimeRTField"/>
+			<fx:reference source ="reduceFirstTimeSTField"/>  
+			<fx:reference source ="reduceFirstTimeTTField"/>
+			<fx:define>
+				<ArrayList fx:id="arrayReduceSecondTimeTField">
+					<TextField fx:id="reduceSecondTimeATField" editable="false" text="0" GridPane.rowIndex="7" />
+		            <TextField fx:id="reduceSecondTimeBTField" editable="false" text="0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeCTField" editable="false" text="0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeDTField" editable="false" text="0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeETField" editable="false" text="0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeFTField" editable="false" text="0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeGTField" editable="false" text="0" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeHTField" editable="false" text="0" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeITField" editable="false" text="0" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeJTField" editable="false" text="0" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeKTField" editable="false" text="0" GridPane.columnIndex="10" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeLTField" editable="false" text="0" GridPane.columnIndex="11" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeMTField" editable="false" text="0" GridPane.columnIndex="12" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeNTField" editable="false" text="0" GridPane.columnIndex="13" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeOTField" editable="false" text="0" GridPane.columnIndex="14" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimePTField" editable="false" text="0" GridPane.columnIndex="15" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeQTField" editable="false" text="0" GridPane.columnIndex="16" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeRTField" editable="false" text="0" GridPane.columnIndex="17" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeSTField" editable="false" text="0" GridPane.columnIndex="18" GridPane.rowIndex="7" />
+					<TextField fx:id="reduceSecondTimeTTField" editable="false" text="0" GridPane.columnIndex="19" GridPane.rowIndex="7" />
+				</ArrayList>
+			</fx:define>
+			<fx:reference source ="reduceSecondTimeATField"/>
+			<fx:reference source ="reduceSecondTimeBTField"/>  
+			<fx:reference source ="reduceSecondTimeCTField"/>
+			<fx:reference source ="reduceSecondTimeDTField"/>
+			<fx:reference source ="reduceSecondTimeETField"/>
+			<fx:reference source ="reduceSecondTimeFTField"/>
+			<fx:reference source ="reduceSecondTimeGTField"/>  
+			<fx:reference source ="reduceSecondTimeHTField"/>
+			<fx:reference source ="reduceSecondTimeITField"/>
+			<fx:reference source ="reduceSecondTimeJTField"/>
+			<fx:reference source ="reduceSecondTimeKTField"/>
+			<fx:reference source ="reduceSecondTimeLTField"/>  
+			<fx:reference source ="reduceSecondTimeMTField"/>
+			<fx:reference source ="reduceSecondTimeNTField"/>
+			<fx:reference source ="reduceSecondTimeOTField"/>
+			<fx:reference source ="reduceSecondTimePTField"/>
+			<fx:reference source ="reduceSecondTimeQTField"/>
+			<fx:reference source ="reduceSecondTimeRTField"/>
+			<fx:reference source ="reduceSecondTimeSTField"/>  
+			<fx:reference source ="reduceSecondTimeTTField"/>
          </children>
       </GridPane>
       <Button fx:id="findWayBtn" layoutX="34.0" layoutY="487.0" mnemonicParsing="false" onAction="#FindWayBtn" text="Найти время путей" />
@@ -267,8 +461,9 @@
             <Label layoutX="33.0" layoutY="21.0" prefHeight="25.0" prefWidth="115.0" text="Критический путь" />
             <TextField fx:id="criticalWayTFied" editable="false" layoutX="154.0" layoutY="21.0" prefHeight="25.0" prefWidth="85.0" />
             <Label layoutX="29.0" layoutY="70.0" prefHeight="25.0" prefWidth="122.0" text="Задать длительность" />
-            <TextField fx:id="setCriticaWaylTField" layoutX="154.0" layoutY="70.0" prefHeight="25.0" prefWidth="85.0" />
+            <TextField fx:id="setCriticalWayTField" layoutX="154.0" layoutY="70.0" prefHeight="25.0" prefWidth="85.0" />
             <Button fx:id="calculateBtn" layoutX="33.0" layoutY="116.0" mnemonicParsing="false" onAction="#CalculateBtn" prefHeight="25.0" prefWidth="200.0" text="Посчитать" />
+            <Button fx:id="cleansingBtn" layoutX="33.0" layoutY="156.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="200.0" text="Очистить" />
          </children>
       </Pane>
    </children>
